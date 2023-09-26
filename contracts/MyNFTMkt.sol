@@ -1,7 +1,7 @@
  // SPDX-License-Identifier: MIT
 pragma solidity 0.8.19;
 
-contract MYNFTMkt{
+contract MyNFTMkt{
     // map an id to the address
     mapping (uint256 => address) public tokens;
     //set the NFT price
