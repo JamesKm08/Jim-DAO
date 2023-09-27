@@ -22,7 +22,7 @@ async function main() {
         nftContract.target,
         ], {value: amount,});
     await daoContract.waitForDeployment();
-    console.log("CryptoDevsDAO deployed to:", daoContract.target);
+    console.log("DevDAO deployed to:", daoContract.target);
 
     // Sleep for 30 seconds to let Etherscan catch up with the deployments
     await sleep(30 * 1000);
@@ -48,9 +48,10 @@ async function main() {
         ],
     });
 
-    // Check and handle errors
-    main().catch((error)=>{
-        console.log(error);
-        process.exitCode = 1;
-    });
 }
+
+// Check and handle errors
+main().catch((error)=>{
+    console.log(error);
+    process.exitCode = 1;
+});
