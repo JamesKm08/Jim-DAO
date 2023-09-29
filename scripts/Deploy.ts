@@ -11,12 +11,12 @@ async function main() {
     console.log("DevNFT deployed to : ", nftContract.target);
 
     // Deploy the fake NFT Market
-    const myNFTMkt = await hre.ethers.deployContract("myNFTMkt");
+    const myNFTMkt = await hre.ethers.deployContract("MyNFTMkt");
     await myNFTMkt.waitForDeployment();
     console.log("myNFTMkt deployed to : ", myNFTMkt.target);
 
     // Deploy the DAO Contract
-    const amount = hre.ethers.parseEther("2");
+    const amount = hre.ethers.parseEther("1");
     const daoContract = await hre.ethers.deployContract("DevDAO", [
         myNFTMkt.target,
         nftContract.target,
